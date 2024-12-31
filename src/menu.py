@@ -41,23 +41,23 @@ class Menu:
         self.bebidas = []
     # metodos
 
-    def agregar_entrada(self, nombre, precio, cantidad):
-        entrada = Entrada(nombre, precio, cantidad)
-        self.entradas.apprend(entrada)
+    def agregar_entrada(self, nombre, precio):
+        entrada = Entrada(nombre, precio)
+        self.entradas.append(entrada)
         return entrada
 
-    def agregar_platos_principales(self, nombre, precio, cantidad):
-        plato_principal = PlatoPrincipal(nombre, precio, cantidad)
+    def agregar_platos_principales(self, nombre, precio ):
+        plato_principal = PlatoPrincipal(nombre, precio)
         self.platos_principales.append(plato_principal)
         return plato_principal
 
-    def agregar_postres(self, nombre, precio, cantidad):
-        postre = Postre(nombre, precio, cantidad)
+    def agregar_postres(self, nombre, precio ):
+        postre = Postre(nombre, precio)
         self.postres.append(postre)
         return postre
 
-    def agregar_bebidas(self, nombre, precio, cantidad):
-        bebida = Bebida(nombre, precio, cantidad)
+    def agregar_bebidas(self, nombre, precio):
+        bebida = Bebida(nombre, precio)
         self.bebidas.append(bebida)
         return bebida
 
