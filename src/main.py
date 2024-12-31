@@ -77,7 +77,7 @@ class RestauranteGUI:
             padding=10
         )
         for mesa in self.restaurante.mesas:
-            color = ft.colors.GREEN if not mesa.ocupada else ft.colors.RED
+            color = ft.colors.GREEN_400 if not mesa.ocupada else ft.colors.RED_700
             estado = "LIBRE" if not mesa.ocupada else "OCUPADA"
             grid.controls.append(
                 ft.Container(
@@ -93,12 +93,10 @@ class RestauranteGUI:
                                     ft.Text(value=f"Mesa {mesa.numero}", size=16, weight=ft.FontWeight.BOLD),
                                 ]
                             ),
+                            ft.Text(value=f"Capacidad: {mesa.tamaño} personas", size=14),
                             ft.Text(value=f"Estado: {estado}", size=14, color=color),
                         ]
                     ),
-                    bgcolor=ft.colors.AMBER_100,
-                    border_radius=10,
-                    padding=10
                 )
             )
         return grid
