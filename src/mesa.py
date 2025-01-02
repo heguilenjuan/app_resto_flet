@@ -11,6 +11,7 @@ class Mesa():
             self.ocupada = True
             return True
         return False
+    
     def liberar(self):
         self.cliente = None
         self.ocupada = False
